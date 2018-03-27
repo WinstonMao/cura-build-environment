@@ -1,12 +1,4 @@
 set(pyqt_command "")
-if(BUILD_OS_WINDOWS)
-    add_custom_target(PyQt
-        COMMAND ${PYTHON_EXECUTABLE} -m pip install PyQt5==5.10.0
-        COMMENT "Installing PyQt5"
-    )
-
-    SetProjectDependencies(TARGET PyQt DEPENDS Python)
-else()
     set(pyqt_command
         # On Linux, PyQt configure fails because it creates an executable that does not respect RPATH
         "LD_LIBRARY_PATH=${CMAKE_INSTALL_PREFIX}/lib"

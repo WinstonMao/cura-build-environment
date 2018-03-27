@@ -1,11 +1,11 @@
 set(qt_url http://download.qt.io/official_releases/qt/5.10/5.10.0/single/qt-everywhere-src-5.10.0.tar.xz)
 set(qt_md5 c5e275ab0ed7ee61d0f4b82cd471770d)
 
-if(BUILD_OS_WINDOWS)
+#if(BUILD_OS_WINDOWS)
     # For some as of yet unknown reason, building Qt on Windows fails because it does not create moc targets.
     # Due to that we install the PyQt wheel into the built Python manually.
-    return()
-endif()
+    #return()
+#endif()
 
 set(qt_options
     -release
