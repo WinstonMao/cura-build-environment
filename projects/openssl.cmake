@@ -10,8 +10,8 @@ if(BUILD_OS_WINDOWS)
     endif()
 
     ExternalProject_Add(OpenSSL
-        URL https://www.openssl.org/source/openssl-1.0.2k.tar.gz
-        URL_HASH SHA256=6b3977c61f2aedf0f96367dcfb5c6e578cf37e7b8d913b4ecb6643c3cb88d8c0
+        URL https://www.openssl.org/source/openssl-1.0.2o.tar.gz
+        URL_HASH SHA256=ec3f5c9714ba0fd45cb4e087301eb1336c317e0d20b575a125050470e8089e4d
         CONFIGURE_COMMAND perl Configure ${_openssl_os} --prefix=${CMAKE_INSTALL_PREFIX}
         BUILD_COMMAND ${_openssl_build}
         INSTALL_COMMAND nmake -f ms\\nt.mak install
