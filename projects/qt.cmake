@@ -51,7 +51,7 @@ set(qt_options
 if(BUILD_OS_OSX)
     list(APPEND qt_options -no-framework)
 elseif(BUILD_OS_WINDOWS)
-    list(APPEND qt_options -opengl desktop)
+    list(APPEND qt_options -opengl desktop -ssl -openssl-runtime)
 elseif(BUILD_OS_LINUX)
     list(APPEND qt_options -no-gtk -no-rpath -qt-xcb)
 endif()
